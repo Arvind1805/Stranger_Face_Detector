@@ -12,7 +12,7 @@ for file in os.listdir("known_faces"):
         face = face_recognition.load_image_file(image_path)
         face_encoding = face_recognition.face_encodings(face)[0]
 
-        # Extract the person's name from the filename
+        # Extract the person's name from the file
         person_name = os.path.splitext(file)[0]
         known_faces[person_name] = face_encoding
         known_face_encodings.append(face_encoding)
